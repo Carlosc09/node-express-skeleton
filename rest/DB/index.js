@@ -1,7 +1,7 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const User = require('./User/user');
+const User = require('./UserDB/user');
 require('dotenv').config();
 
 mongoose.connect(process.env.DB_HOST);

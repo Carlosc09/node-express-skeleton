@@ -3,7 +3,7 @@
 // auth controller routes
 const express = require('express');
 const router = express.Router();
-const user = require('../routs/user');
+const user = require('../routs/user/routUser');
 
 // get /api/user/
 router.get('/user', (req, res) => {
@@ -13,6 +13,16 @@ router.get('/user', (req, res) => {
 // get /api/user/
 router.post('/user', (req, res) => {
     user.insert(req, res);
+});
+
+// get /api/user/
+router.post('/user/authenticate', (req, res) => {
+    user.authenticate(req, res);
+});
+
+// delete /api/user/
+router.delete('/user', (req, res) => {
+    user.delete(req, res);
 });
 
 module.exports = router;
