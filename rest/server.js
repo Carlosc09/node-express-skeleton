@@ -10,9 +10,12 @@ require('dotenv').config();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+/** Implement authToken midleware. */
 app.use(authToken);
+/** Implement user routs. */
 app.use('/api/portal', userController);
 
+/** start server. */
 const server = app.listen(process.env.PORT, () => {
     // eslint-disable-next-line no-console
     console.log('Server is running');
