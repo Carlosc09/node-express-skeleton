@@ -19,4 +19,4 @@ Run the Express server:
     npm run start
 Validate you code:
 
-    npm run test
+    npm run lint
