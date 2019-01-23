@@ -4,9 +4,9 @@ Create a REST api with ExpressJS and connect to MongoDB using MongooseJs, implem
     Node.js version 10.9.0
     MongoDB version 4.0.3
 ### Installing
-Install mongoDB.
+Install mongoDB, Run
 `npm install`
-Create a .env file with:
+and create a .env file with:
 
     DB_HOST=mongodb host ip
     PORT=The por that you want express to run
