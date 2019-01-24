@@ -3,7 +3,7 @@
 // auth controller routes
 const express = require('express');
 const router = express.Router();
-const user = require('../routs/user/routUser');
+const user = require('../Controller/user/userController');
 
 // get /api/user/
 router.get('/user', (req, res) => {
