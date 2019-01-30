@@ -20,6 +20,11 @@ router.post('/user/authenticate', (req, res) => {
     user.authenticate(req, res);
 });
 
+// update /api/user/
+router.post('/user/:id/', (req, res) => {
+    user.edit(req, res);
+});
+
 // delete /api/user/
 router.delete('/user', (req, res) => {
     user.delete(req, res);

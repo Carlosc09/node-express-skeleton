@@ -27,6 +27,14 @@ module.exports = {
         });
     },
 
+    edit(req, res) {
+        DB.User.edit(req.params.id, req.body).then(_res => {
+            res.send(_res);
+        }).catch(_err => {
+            res.status(500).send(_err);
+        });
+    },
+
     delete(req, res) {
         DB.User.delete(req.body).then(_res => {
             res.send(_res);
