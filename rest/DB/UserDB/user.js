@@ -63,6 +63,26 @@ module.exports = {
         });
     },
 
+    edit(_id, _body) {
+        return new Promise((_resolve, _reject) => {
+            User.findById(_id, (err, result) => {
+                if(err) {
+                    _reject(_err);
+                }
+                result.Info = _body.Info;
+                result.Skills = _body.Skills;
+                result.Goals = _body.Goals;
+                result.save((_err, _res) => {
+                    if(_err) {
+                        _reject(_err);
+                    }
+                    _res.LogInfo = {};
+                    _resolve(_res);
+                });
+            });
+        });
+    },
+
     delete(_users) {
         return new Promise((resolve, reject) => {
             User.deleteOne({ _id: _users._id }, (err, info) => {
